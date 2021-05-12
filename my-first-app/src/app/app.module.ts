@@ -1,3 +1,4 @@
+import { SecretTrainComponent } from './secret-train/secret-train';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,8 @@ import { BindingTrainComponent } from './binding-train/binding-train.component';
     ServersComponent,
     WarningAlert,
     SuccessAlertComponent,
-    BindingTrainComponent
+    BindingTrainComponent,
+    SecretTrainComponent
   ],
   imports: [
     BrowserModule,
