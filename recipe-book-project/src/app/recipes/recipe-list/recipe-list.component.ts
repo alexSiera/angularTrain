@@ -1,3 +1,4 @@
+import { Recipe } from './../recipe.model';
 import { Component } from "@angular/core";
 
 @Component({
@@ -7,5 +8,7 @@ import { Component } from "@angular/core";
 })
 
 export class RecipeListComponent {
-
+  recipes: Recipe[] = [
+    new Recipe('A test Recipe', 'This is simply a test', 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg')
+  ];
 }
