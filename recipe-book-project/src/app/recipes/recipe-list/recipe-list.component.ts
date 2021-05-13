@@ -1,5 +1,5 @@
 import { Recipe } from './../recipe.model';
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: 'app-recipe-list',
@@ -8,9 +8,12 @@ import { Component } from "@angular/core";
 })
 
 export class RecipeListComponent {
+  @Output() singleItemClicked = new EventEmitter<Recipe>();
   recipes: Recipe[] = [
     new Recipe('A test Recipe', 'This is simply a test', 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg'),
     new Recipe('Rice', 'This is just rice', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojgsKeQxF_XpsTFYG1yjt8IUAqPndz6pCDQAmKU5oPpRaUrnT9Ym18jSLlTn-9cI7M34&usqp=CAU')
-
   ];
+  onItemClicked(recipeItem) {
+    this.singleItemClicked.emit(recipeItem);
+  }
 }

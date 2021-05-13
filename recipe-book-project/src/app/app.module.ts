@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RecipeListItemСomponent } from './recipes/recipe-list/recipe-list-item/recipe-list-item.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.
     RecipeDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

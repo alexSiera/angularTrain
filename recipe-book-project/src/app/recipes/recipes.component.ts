@@ -1,3 +1,4 @@
+import { Recipe } from './recipe.model';
 import { Component } from "@angular/core";
 
 @Component({
@@ -7,5 +8,5 @@ import { Component } from "@angular/core";
 })
 
 export class RecipesComponent {
-
+  recipe: Recipe;
 }
