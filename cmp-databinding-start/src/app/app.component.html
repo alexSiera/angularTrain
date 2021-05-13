@@ -24,4 +24,18 @@
       </app-server-element>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <p>Test assingment</p>
+      <app-game-control (incrementingNumber)="onNumberIncrease($event)"></app-game-control>
+      <p>Current number is: {{ number }}</p>
+    </div>
+    <div class="col-xs-6">
+      <app-odd *ngFor="let oddNumber of oddNumbers">{{ oddNumber }}</app-odd>
+    </div>
+    <div class="col-xs-6">
+      <app-even *ngFor="let evenNumber of evenNumbers">{{ evenNumber }}</app-even>
+    </div>
+  </div>
 </div>

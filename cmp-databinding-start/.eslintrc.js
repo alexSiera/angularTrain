@@ -41,7 +41,8 @@ module.exports = {
             "prefix": "app",
             "style": "camelCase"
           }
-        ]
+        ],
+        "@typescript-eslint/explicit-module-boundary-types" : 'off'
       }
     },
     {
