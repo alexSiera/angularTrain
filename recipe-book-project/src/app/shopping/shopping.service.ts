@@ -4,6 +4,9 @@ export class ShoppingService {
   public ingredients: Ingredient[] = [
     new Ingredient('Apples', 5)
   ];
+  getIngredients() {
+    return this.ingredients.slice();
+  }
   onNewIngredientAdded(newIng: Ingredient) {
     console.log(newIng);
     this.ingredients.push(newIng);
