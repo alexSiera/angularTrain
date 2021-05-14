@@ -1,5 +1,6 @@
+import { CountersService } from './counters.service';
 import { UsersService } from './users.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   providers: [UsersService]
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+  activeUserChanges = 0;
+  inactiveUserChanges = 0;
+  constructor(private countersService: CountersService) {}
+  ngOnInit() {
+    this.activeUserChanges = this.countersService.activeUsersActionNumber;
+    this.inactiveUserChanges = this.countersService.inactiveUsersActionNumber;
+  }
 }

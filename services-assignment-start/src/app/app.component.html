@@ -1,6 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div>
+        Active user Changes: {{ activeUserChanges }}
+      </div>
+      <div>
+        Inactive user Changes: {{ inactiveUserChanges }}
+      </div>
       <app-active-users></app-active-users>
       <app-inactive-users></app-inactive-users>
     </div>

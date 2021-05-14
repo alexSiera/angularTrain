@@ -1,3 +1,4 @@
+import { CountersService } from './counters.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +18,7 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CountersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
