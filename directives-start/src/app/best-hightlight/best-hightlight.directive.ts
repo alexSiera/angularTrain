@@ -13,6 +13,8 @@ export class BestHightlightDirective implements OnInit {
   ngOnInit() {
     this.backgroundColor = this.defaultColor;
     this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue')
+    this.renderer.addClass
+
   }
   // Listening host events
   @HostListener('mouseenter') mouseover(eventData: Event) {
