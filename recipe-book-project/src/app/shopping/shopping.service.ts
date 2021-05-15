@@ -14,6 +14,9 @@ export class ShoppingService {
     this.ingredients.push(newIng);
     this.ingridientsChanged.emit(this.ingredients.slice());
   }
+  onAddIngrToShoppingList(newIngredients: Ingredient[]) {
+    this.ingredients.push(...newIngredients);
+  }
   onIngredientDeleted(ingredientName: string) {
     console.log(ingredientName);
     const currentElement = this.ingredients.findIndex((el) => el.name === ingredientName);
