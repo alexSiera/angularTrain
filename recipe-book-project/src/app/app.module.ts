@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { RecipeListItemСomponent } from './recipes/recipe-list/recipe-list-item/recipe-list-item.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 import { FormsModule } from '@angular/forms';
+import { ShoppingService } from './shopping/shopping.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_SCRIPT",
+    "err": {
+      "name": "Error",
+      "message": "Missing script: o",
+      "code": "ERR_PNPM_NO_SCRIPT",
+      "stack": "Error: Missing script: o\n    at Object.handler (/home/alex/.nvm/versions/node/v16.1.0/lib/node_modules/pnpm/dist/pnpm.cjs:117130:13)\n    at async Timeout._onTimeout (/home/alex/.nvm/versions/node/v16.1.0/lib/node_modules/pnpm/dist/pnpm.cjs:121003:22)"
+    }
+  }
+}
