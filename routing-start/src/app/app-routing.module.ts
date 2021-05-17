@@ -1,3 +1,5 @@
+import { ServerResolver } from './servers/server/server-resolver.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { CanDeactivateGuard } from './servers/edit-server/can-deactivate-guard';
 import { AuthGuard } from './auth-guard.service';
 import { NgModule } from "@angular/core";
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     children: [
       {
         path: ':id',
+        resolve: {server: ServerResolver},
         component: ServerComponent
       },
       {
@@ -47,9 +50,14 @@ const appRoutes: Routes = [
       },
     ]
   },
+  // {
+  //   path: 'not-found',
+  //   component: PageNotFoundComponent
+  // },
   {
     path: 'not-found',
-    component: PageNotFoundComponent
+    component: ErrorPageComponent,
+    data: {message: 'Page not found!'}
   },
   {
     path: '**',
