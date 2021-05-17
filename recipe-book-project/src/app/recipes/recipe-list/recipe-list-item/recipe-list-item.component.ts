@@ -10,7 +10,6 @@ import { RecipeService } from "../../recipes.service";
 
 export class RecipeListItemСomponent {
   @Input() recipe: Recipe;
-  //@Output() itemClicked = new EventEmitter();
   constructor(private recipeService: RecipeService) {
 
   }
